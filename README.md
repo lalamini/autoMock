@@ -4,7 +4,7 @@ This project will automatic generate Mock data for front-end test
 
 这个项目主要是用来自动化生成前端所需要的Mock数据的工具
 
-##目的
+## 目的
 
 我们在做前端测试的时候，总是会遇到这样那样的问题，有时候确实是前端的问题，有时候是后端的问题。 所以通常都希望能够有一个挡板程序，把预期正确的数据发送过来，让我们能顺利的检验前端的表现是不是正确。
 
@@ -14,7 +14,7 @@ This project will automatic generate Mock data for front-end test
 
 所以才会有了这个项目，可以自己生成Mock数据的项目。
 
-##基于原则
+## 基于原则
 
 并不是所有的项目都可以使用
 
@@ -23,13 +23,13 @@ This project will automatic generate Mock data for front-end test
 其次，前端所发起的请求，需要包含一个原来目的ip的字段[Host]
 
 
-###系统构成
+## 系统构成
 
 我们是用来做手机UI测试的，就手机来说， 需要 Charles 做转发，需要一台带有容器环境的Linux以及一套mysql数据库
 
 我所提供的代码里面，包含一个容器制作的脚本，以及名为start.sh的容器启动脚本
 
-###使用方法
+## 使用方法
 
 start.sh 脚本里面有两条指令，一条指令启动bridge工作模式，一条指令启动proxy工作模式。
 
