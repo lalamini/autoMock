@@ -18,10 +18,13 @@ This project will automatic generate Mock data for front-end test
 
 并不是所有的项目都可以使用
 
-目前我所想到的项目，就是前端不参与身份/数据校验，仅后端参与身份/数据校验的应用程序
-
-其次，前端所发起的请求，需要包含一个原来目的ip的字段[Host]
-
+   1. 前端不参与身份/数据校验
+   
+   前端不参与身份/数据校验，仅后端参与身份/数据校验的应用程序； 这种结构的app，数据才不具有实效性。 mock数据不需要关心加/解密的流程。
+   
+   2. 前端所发起的请求，需要包含一个原来目的ip的字段[Host]
+   
+   包含了[Host]字段，并且Charles需要打开[Presever Host header]选项，bridge模式下，才能够让mock平台准确的转发前端的请求到指定的后端
 
 ## 系统构成
 
@@ -33,9 +36,13 @@ This project will automatic generate Mock data for front-end test
 
 start.sh 脚本里面有两条指令，一条指令启动bridge工作模式，一条指令启动proxy工作模式。
 
-当要记录前后端的通讯时，使用bridge工作模式，此时，前端和后段正常通讯，所有操作和平时的测试方式一至，mock平台会记录所有的操作（请求和响应）进入mysql数据库备用。
+   1. bridge 工作模式
+   
+   当要记录前后端的通讯时，使用bridge工作模式，此时，前端和后段正常通讯，所有操作和平时的测试方式一至，mock平台会记录所有的操作（请求和响应）进入mysql数据库备用。
 
-当要使用挡板模式时，使用proxy工作模式，此时，前端发起的请求，会被mock平台阻拦，并从已经存储的mysql中找出响应的response 返回给前端。
+   2. proxy 工作模式
+   
+   当要使用挡板模式时，使用proxy工作模式，此时，前端发起的请求，会被mock平台阻拦，并从已经存储的mysql中找出响应的response 返回给前端。
 
 
 
