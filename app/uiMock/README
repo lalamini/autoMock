@@ -1,0 +1,3 @@
+#common app , manages common model and common operation
+#bridge app , like a bridge , when operation, it recorder and transfer
+#proxy app, when operaion, it block and get the mock data to be the response
