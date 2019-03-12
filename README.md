@@ -43,6 +43,10 @@ start.sh 脚本里面有两条指令，一条指令启动bridge工作模式，�
    2. proxy 工作模式
    
    当要使用挡板模式时，使用proxy工作模式，此时，前端发起的请求，会被mock平台阻拦，并从已经存储的mysql中找出响应的response 返回给前端。
+   
+   3. django创建数据库
+   
+   uiMock文件目录中的setting文件修改数据库相关信息，然后执行django标准的数据库创建命令。
 
 
 
